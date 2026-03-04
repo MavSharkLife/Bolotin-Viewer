@@ -2,24 +2,21 @@ const videoStream = document.createElement('video')
 videoStream.autoplay = true
 videoStream.playsInline = true
 
-let currentFacing = 'user' // default to front camera
+let currentFacing = 'environment' // default to back camera
 let currentLabel = 'Nothing Detected'
-let lastSpokenLabel = ''
-let lastSpokenTime = 0
 
-function autoSpeak(label) {
-  const now = Date.now()
-  if (
-    label !== 'Nothing Detected' &&
-    now - lastSpokenTime > 1500 &&
-    label !== lastSpokenLabel
-  ) {
-    const speak = new SpeechSynthesisUtterance(currentLabel)
-    window.speechSynthesis.speak(speak)
-    lastSpokenLabel = currentLabel
-    lastSpokenTime = now
-  }
-}
+const yoloCard = document.getElementById('yolo-card')
+const micBtn = document.getElementById('mic-btn')
+
+window.speechSynthesis.cancel()
+micBtn.addEventListener('click', () => {
+  window.speechSynthesis.cancel()
+  const speak = new SpeechSynthesisUtterance(currentLabel)
+  speak.volume = 1
+  speak.rate = 1
+  speak.pitch = 1
+  window.speechSynthesis.speak(speak)
+})
 
 function startCamera() {
   if (videoStream.srcObject) {

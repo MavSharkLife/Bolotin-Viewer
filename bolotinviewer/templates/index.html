@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- if youre going to assign a domain to this, uncomment this line 
+    <!-- if youre going to assign a domain to this, uncomment this line -->
     <meta
       http-equiv="Content-Security-Policy"
       content="upgrade-insecure-requests"
-    /> -->
+    />
     <link
       rel="icon"
       href="{{url_for('static', filename='assets/logobolkotin.svg')}}"
@@ -31,11 +31,16 @@
       <main class="card">
         <img id="yolo-card" src="" />
         <div class="buttons">
-          <button class="btn">
+          <button class="btn" id="mic-btn">
+            <img
+              src="{{url_for('static', filename='assets/microphone-solid-full.svg')}}"
+              alt="Microphone"
+            />
+          </button>
+          <button class="btn" id="rotate-btn">
             <img
               src="{{url_for('static', filename='assets/rotate-solid-full.svg')}}"
               alt="Rotate Camera"
-              id="rotate-btn"
             />
           </button>
         </div>
