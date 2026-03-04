@@ -3,6 +3,8 @@
 Bolotin Viewer is a Flask based application that assists with those with vision impairments.
 
 
+## Demo
+You can view a demo of the project here: https://see.liquidpcs.com
 ## Installation
 
 
