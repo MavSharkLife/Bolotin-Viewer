@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- if youre going to assign a domain to this, uncomment this line -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <link
+      rel="icon"
+      href="{{url_for('static', filename='assets/logobolkotin.svg')}}"
+    />
+    <title>Project Bolotin</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img
+          src="{{url_for('static', filename='assets/logobolkotin.svg')}}"
+          alt="Bolotin Logo"
+          class="logo"
+        />
+      </header>
+      <main class="card">
+        <img id="yolo-card" src="" />
+        <div class="buttons">
+          <button class="btn">
+            <img
+              src="{{url_for('static', filename='assets/rotate-solid-full.svg')}}"
+              alt="Rotate Camera"
+              id="rotate-btn"
+            />
+          </button>
+        </div>
+      </main>
+    </div>
+    <script src="{{ url_for('static', filename='/script.js') }}"></script>
+  </body>
+</html>
