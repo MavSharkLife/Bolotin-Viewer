@@ -8,7 +8,7 @@ Bolotin Viewer is a Flask based application that assists with those with vision 
 
 ```bash
 git clone https://github.com/mavsharklife/bolotin-viewer.git
-cd bolotin-viewer.git
+cd bolotin-viewer
 pip install -r requirements.txt
 ```
 
