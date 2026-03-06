@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="en">
+  <!-- Sets up meta tags and links the css -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- if youre going to assign a domain to this, uncomment this line 
+    <!-- If you're going to assign a domain to this, uncomment this line:
     <meta
       http-equiv="Content-Security-Policy"
       content="upgrade-insecure-requests"
@@ -13,7 +14,6 @@
       href="{{url_for('static', filename='assets/logobolkotin.svg')}}"
     />
     <title>Project Bolotin</title>
-
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='/style.css') }}"
@@ -29,7 +29,11 @@
         />
       </header>
       <main class="card">
+        
+        <!-- This element is replaced by the live feed from YOLO -->
         <img id="yolo-card" src="" />
+        
+         <!-- Container for the buttons -->
         <div class="buttons">
           <button class="btn" id="mic-btn">
             <img
